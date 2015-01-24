@@ -1,7 +1,30 @@
-# itech-team-pamm
-Internet Technologies 2015 Team Project
+#Internet Technologies 2015 Team Project
+
+The philosophy behind Django as I understand it is that you create a project such as a blog. Let's call it 'Great Crack' - this would be your project (folder). This might be comprised of a `poll` for surveying your buddies, a `comments` section so they can troll you, and of course everyone needs to `search` through your many blog posts. The things I just enumerated are potential `apps` this makes Django quite modular.
+
+```
+pamm/						- project root
+├── manage.py 				- creating and running the server
+├── mango 					- an app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── migrations
+│   │   └── __init__.py
+│   ├── models.py
+│   ├── tests.py
+│   └── views.py
+└── pamm					- project cofig
+    ├── __init__.py
+    ├── __init__.pyc
+    ├── settings.py
+    ├── settings.pyc
+    ├── urls.py
+    └── wsgi.py
+```
 
 ![Python](http://imgs.xkcd.com/comics/python.png)
+
+**[PEP 8 - Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces)
 
 **[Download PyCharm](https://www.jetbrains.com/pycharm/download/)**
 
@@ -38,7 +61,7 @@ $ git config --global user.email johndoe@example.com
 **Basic git workflow**
 + You make changes to e.g. `view.py`
 + You do `git status` to see if the changes are registered
-+ You could do `git diff` to check what differes from the original file
++ You could do `git diff` to check what differs from the original file
 + You do `git add` to add your changes to your local repo
 + You do `git commit -m "info about what you changed/fixed"` to commit things (if they are ready)
 + Finally `git push` to push your changes to the shared project on github
@@ -51,3 +74,8 @@ git push
 # username and password
 # todo: set-up SSH authentication
 ```
+
+##Django
+**[Starting a Django 1.6 Project the Right Way](http://www.jeffknupp.com/blog/2013/12/18/starting-a-django-16-project-the-right-way/)**
+I found this quite informative
+
