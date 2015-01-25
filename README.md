@@ -2,17 +2,19 @@
 
 **Table of Contents**
 
-- [Internet Technologies 2015 Team Project](#)
-    - [Python](#)
-    - [Pip](#)
-    - [Virtual Environments](#)
-        - [Virtualenv](#)
-        - [Virtualenvwrapper](#)
-            - [Commands in more detail](#)
-    - [Git](#)
-    - [Django](#)
-    - [Presentation](#)
-    - [Cool stuff](#)
+- [Internet Technologies 2015 Team Project](#internet-technologies-2015-team-project)
+    - [Python](#python)
+    - [Pip](#pip)
+    - [Virtual Environments](#virtual-environments)
+        - [Virtualenv](#virtualenv)
+        - [Virtualenvwrapper](#virtualenvwrapper)
+            - [Commands in more detail](#commands-in-more-detail)
+    - [Git](#git)
+    - [Django](#django)
+    - [Presentation](#presentation)
+    - [Cool stuff](#cool-stuff)
+        - [CSS Frameworks](#css-frameworks)
+        - [Technologies used in industry](#technologies-used-in-industry)
 
 ## Python
 ![Python](http://imgs.xkcd.com/comics/python.png)
@@ -41,6 +43,9 @@ $ sudo pip install requests
 ```
 
 `pip` tries to install the package into `/Library/Python/2.7/site-packages/requests`. This is a special directory that Python knows about. Anything that's installed in `site-packages` can be imported by your programs.
+
+##Further reading**
+- [Python Tips](https://freepythontips.wordpress.com/)
 
 ## Virtual Environments
 
@@ -194,7 +199,7 @@ The text in *italics* highlights things that we will need to produce but won't n
 
 [JS Sequence Diagrams](http://bramp.github.io/js-sequence-diagrams/)
 
-**CSS Frameworks**
+###CSS Frameworks
 * [Semantic UI](http://semantic-ui.com/)
 * [Bootstrap](http://getbootstrap.com/)
 * [Pure](http://purecss.io/)
@@ -204,7 +209,7 @@ The text in *italics* highlights things that we will need to produce but won't n
 * [HTML Kickstart](http://www.99lime.com/elements/)
 * [Kickstrap](http://getkickstart.com/)
 
-**Technologies used in industry**
+###Technologies used in industry
 
 <table>
     <tr align="center">
