@@ -44,7 +44,7 @@ $ sudo pip install requests
 
 `pip` tries to install the package into `/Library/Python/2.7/site-packages/requests`. This is a special directory that Python knows about. Anything that's installed in `site-packages` can be imported by your programs.
 
-##Further reading**
+##Further reading
 - [Python Tips](https://freepythontips.wordpress.com/)
 
 ## Virtual Environments
@@ -54,7 +54,7 @@ $ sudo pip install requests
 ###Virtualenv
 [`virtualenv`](https://virtualenv.pypa.io/en/latest/) solves a very specific problem: it allows multiple Python projects that have different (and often conflicting) requirements, to coexist on the same computer.
 
-To intall `virtualenv`, globally simple type:
+To install `virtualenv`, globally simple type:
 ```bash
 $ sudo pip install virtualenv
 ```
@@ -114,7 +114,7 @@ Study this diagram it will help you a lot.
 	$ git clone https://github.com/mickeypash/itech-team-pamm itech-project/
 ```
 
-**Pre-requisits**
+**Pre-requisites**
 + Mac OSX - it comes preinstalled
 + Windows - you can download it [here](http://git-scm.com/download/win)
 + This will install git bash and git gui
@@ -250,5 +250,6 @@ The text in *italics* highlights things that we will need to produce but won't n
     </tr>
 </table>
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/mickeypash/itech-team-pamm/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
