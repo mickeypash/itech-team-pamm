@@ -48,9 +48,14 @@ coverage.xml
 
 # Django stuff:
 *.log
+#.sqlite3 # No need for the database
 
 # Sphinx documentation
 docs/_build/
 
 # PyBuilder
 target/
+
+# OS Image cacheing
+.DS_Store
+Thumbs.db

@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+STATIC_PATH = os.path.join(BASE_DIR,'static')
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -39,7 +42,7 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-#    'South', # http://south.readthedocs.org/en/latest/about.html
+#    'south', # http://south.readthedocs.org/en/latest/about.html
 )
 
 LOCAL_APPS = (
@@ -91,3 +94,21 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+TEMPLATE_DIRS = [
+    TEMPLATE_PATH,
+]
+
+# This is some sort of caching magic that we don't really need
+# But I like to feel like Harry Potter
+TEMPLATE_LOADERS = (
+    ('django.template.loaders.cached.Loader', (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )),
+)
