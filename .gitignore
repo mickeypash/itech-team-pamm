@@ -60,7 +60,8 @@ coverage.xml
 
 # Django stuff:
 *.log
-#.sqlite3 # No need for the database
+db.sqlite3 # No need for the database
+*.sqlite3
 
 # Sphinx documentation
 docs/_build/
