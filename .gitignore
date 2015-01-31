@@ -4,6 +4,18 @@ __pycache__/
 *.pyc
 .*swp
 
+## Directory-based project format:
+.idea/
+
+## Plugin-specific files:
+
+# IntelliJ
+out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+
 # C extensions
 *.so
 
