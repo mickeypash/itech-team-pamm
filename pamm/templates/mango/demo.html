@@ -4,23 +4,88 @@
 
 <html>
     <head>
+        <title>Mango with Django</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
-        <title>Mango with Django</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="{% static 'css/demo.css' %}">
+        <link rel="stylesheet" href="{% static 'css/pure/pure-min.css' %}">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
         <link rel="stylesheet" href="{% static 'css/medium-editor.css' %}">
         <link rel="stylesheet" href="{% static 'css/themes/default.css' %}"  id="medium-editor-theme">
+        <link rel="stylesheet" href="{% static 'css/slidebars.min.css' %}">
     </head>
     <body>
-        <div id="container">
-            <div class="editable" contenteditable="true" data-placeholder="Type your text" data-medium-element="true" role="textbox" aria-multiline="false">
-                <h1>Mango</h1>
-                <p>The mango tree is erect, 30 to 100 ft (roughly 10-30 m) high, with a broad, rounded canopy which may, with  age, attain 100 to 125 ft (30-38 m) in width, or a more upright, oval, relatively slender crown. In deep soil, the taproot descends to a depth of 20 ft (6 in), the profuse, wide-spreading, feeder root system also sends down many anchor roots which penetrate for several feet. The tree is long-lived, some specimens being known to be 300 years old and still fruiting.</p>
-                <p>Nearly evergreen, alternate leaves are borne mainly in rosettes at the tips of the branches and numerous twigs from which they droop like ribbons on slender petioles 1 to 4 in (2.5-10 cm) long. The new leaves, appearing periodically and irregularly on a few branches at a time, are yellowish, pink, deep-rose or wine-red, becoming dark-green and glossy above, lighter beneath. The midrib is pale and conspicuous and the many horizontal veins distinct. Full-grown leaves may be 4 to 12.5 in (10-32 cm) long and 3/4 to 2 1/8 in (2-5.4 cm) wide. Hundreds and even as many as 3,000 to 4,000 small, yellowish or reddish flowers, 25% to 98% male, the rest hermaphroditic, are borne in profuse, showy, erect, pyramidal, branched clusters 2 1/2 to 15 1/2 in (6-40 cm) high. There is great variation in the form, size, color and quality of the fruits. They may be nearly round, oval, ovoid-oblong, or somewhat kidney-shaped, often with a break at the apex, and are usually more or less lop-sided. They range from 2 1/2 to 10 in (6.25-25 cm) in length and from a few ounces to 4 to 5 lbs (1.8-2.26 kg). The skin is leathery, waxy, smooth, fairly thick, aromatic and ranges from light-or dark-green to clear yellow, yellow-orange, yellow and reddish-pink, or more or less blushed with bright-or dark-red or purple-red, with fine yellow, greenish or reddish dots, and thin or thick whitish, gray or purplish bloom, when fully ripe. Some have a "turpentine" odor and flavor, while others are richly and pleasantly fragrant. The flesh ranges from pale-yellow to deep-orange. It is essentially peach-like but much more fibrous (in some seedlings excessively so-actually "stringy"); is extremely juicy, with a flavor range from very sweet to subacid to tart.</p>
 
+    <nav class="navbar navbar-default navbar-fixed-top sb-slide" role="navigation">
+            <!-- Left Control -->
+            <div class="sb-toggle-left navbar-left">
+                <div class="navicon-line"></div>
+                <div class="navicon-line"></div>
+                <div class="navicon-line"></div>
+            </div><!-- /.sb-control-left -->
+            
+            <div class="container">
+                <!-- Logo -->
+                <div id="logo" class="navbar-left">
+                    <a href="http://plugins.adchsm.me/slidebars/"><img src="http://plugins.adchsm.me/slidebars/images/slidebars-logo@2x.png" alt="Slidebars Logo" width="118" height="40"></a>
+                </div><!-- /#logo -->
+                <<pseudo:after>></<pseudo:after>>
+            </nav>
+                <!-- Menu -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://plugins.adchsm.me/slidebars/">Home</a></li>
+                    <li><a href="http://plugins.adchsm.me/slidebars/index.php#download">Download</a></li>
+                    <li><a href="http://plugins.adchsm.me/slidebars/usage.php">Usage</a></li>
+                    <li><a href="http://plugins.adchsm.me/slidebars/contact.php">Contact</a></li>
+                    <li><a id="top-arrow" href="#top">^</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="sb-slidebar sb-left sb-active">
+            <nav>
+                <ul class="sb-menu">
+                    <li><img src="http://plugins.adchsm.me/slidebars/images/slidebars-logo-white@2x.png" alt="Slidebars" width="118" height="40"></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/">Home</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/index.php#download">Download</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/usage.php">Usage</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/usage.php#api">API</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/compatibility.php">Compatibility</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/issues.php">Issues</a></li>
+                    <li class="sb-close"><a href="http://plugins.adchsm.me/slidebars/contact.php">Contact</a></li>
+                    <li class="sb-close"><a class="github" href="https://github.com/adchsm/Slidebars">Github</a></li>
+                    <li class="sb-close"><span class="sb-open-right">About the Author</span></li>
+                    <li class="sb-close"><small>Slidebars © 2014 Adam Smith</small></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="sb-site">
+            <div id="container">
+                <div class="editable" contenteditable="true" data-placeholder="Type your text" data-medium-element="true" role="textbox" aria-multiline="false">
+                    <h1>Mango</h1>
+                    <p>The mango tree is erect, 30 to 100 ft (roughly 10-30 m) high, with a broad, rounded canopy which may, with  age, attain 100 to 125 ft (30-38 m) in width, or a more upright, oval, relatively slender crown. In deep soil, the taproot descends to a depth of 20 ft (6 in), the profuse, wide-spreading, feeder root system also sends down many anchor roots which penetrate for several feet. The tree is long-lived, some specimens being known to be 300 years old and still fruiting.</p>
+                    <p>Nearly evergreen, alternate leaves are borne mainly in rosettes at the tips of the branches and numerous twigs from which they droop like ribbons on slender petioles 1 to 4 in (2.5-10 cm) long. The new leaves, appearing periodically and irregularly on a few branches at a time, are yellowish, pink, deep-rose or wine-red, becoming dark-green and glossy above, lighter beneath. The midrib is pale and conspicuous and the many horizontal veins distinct. Full-grown leaves may be 4 to 12.5 in (10-32 cm) long and 3/4 to 2 1/8 in (2-5.4 cm) wide. Hundreds and even as many as 3,000 to 4,000 small, yellowish or reddish flowers, 25% to 98% male, the rest hermaphroditic, are borne in profuse, showy, erect, pyramidal, branched clusters 2 1/2 to 15 1/2 in (6-40 cm) high. There is great variation in the form, size, color and quality of the fruits. They may be nearly round, oval, ovoid-oblong, or somewhat kidney-shaped, often with a break at the apex, and are usually more or less lop-sided. They range from 2 1/2 to 10 in (6.25-25 cm) in length and from a few ounces to 4 to 5 lbs (1.8-2.26 kg). The skin is leathery, waxy, smooth, fairly thick, aromatic and ranges from light-or dark-green to clear yellow, yellow-orange, yellow and reddish-pink, or more or less blushed with bright-or dark-red or purple-red, with fine yellow, greenish or reddish dots, and thin or thick whitish, gray or purplish bloom, when fully ripe. Some have a "turpentine" odor and flavor, while others are richly and pleasantly fragrant. The flesh ranges from pale-yellow to deep-orange. It is essentially peach-like but much more fibrous (in some seedlings excessively so-actually "stringy"); is extremely juicy, with a flavor range from very sweet to subacid to tart.</p>
+
+                </div>
             </div>
         </div>
+
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <!-- Slidebars -->
+        <script src="{% static 'js/slidebars.min.js' %}"></script>
+        <script>
+          (function($) {
+            $(document).ready(function() {
+              $.slidebars();
+            });
+          }) (jQuery);
+        </script>
+        
+        <!-- Medium Editor -->
         <script src="{% static 'js/medium-editor.min.js' %}"></script>
         <script>
             var editor = new MediumEditor('.editable', {
@@ -32,6 +97,7 @@
                 cssLink.href = 'http://dfimg.com/medium-editor/dist/css/' + this.value + '.css';
             });
         </script>
+
         <div id="medium-editor-toolbar-1" class="medium-editor-toolbar stalker-toolbar">
             <ul id="medium-editor-toolbar-actions1" class="medium-editor-toolbar-actions clearfix">
                 <li>
