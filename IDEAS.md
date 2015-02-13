@@ -14,15 +14,18 @@
 MoSCoW slide and Web stack slide
 
 [Evernote's Data Structure](https://dev.evernote.com/doc/articles/data_structure.php)
-Can we run our app on Digital Ocean?
-Indexing and searching notes with Whoosh and Haystack
-Found a JQuery library called Sidebars
-Should we store things as Markdown/reStructuredText/AsciiDoc/raw HTML
-Norvig spelling corrector
-Embedding things into notes (Embedly)
+
+[Django URLS, howto map root to app](http://stackoverflow.com/questions/7580220/django-urls-howto-map-root-to-app)
+
+* Can we run our app on Digital Ocean?
+* Indexing and searching notes with Whoosh and Haystack
+* Found a JQuery library called Sidebars
+* Should we store things as Markdown/reStructuredText/AsciiDoc/raw HTML
+* Norvig spelling corrector
+* Embedding things into notes (Embedly)
     Wiki links/Maps/Images/Other attachments
-Internal links to other notes (search through data model and provide link)
-Save as anything (pandoc)
+* Internal links to other notes (search through data model and provide link)
+* Save as anything (pandoc)
 
 Must
     private and public notes
