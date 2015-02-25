@@ -48,6 +48,7 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     'mango',
+    'notes',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
