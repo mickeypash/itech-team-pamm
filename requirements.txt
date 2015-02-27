@@ -1,6 +1,7 @@
 Django==1.7.3
 Pillow==2.7.0
 South==1.0.2
+fake-factory==0.5.0
 flake8==2.3.0
 mccabe==0.3
 pep8==1.5.7
