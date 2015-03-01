@@ -6,8 +6,12 @@ class NoteForm(ModelForm):
         model = Note
         fields = ('title', 'content', 'tag')
 
+class FolderForm(ModelForm):
+    class Meta:
+        model = Folder
+        fields = ('title', 'note')
 
 class TagForm(ModelForm):
     class Meta:
         model = Tag
-        fields = ('label')
+        fields = ('label',)
