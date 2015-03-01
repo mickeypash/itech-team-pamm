@@ -13,9 +13,10 @@ class User(models.Model):
 class Folder(models.Model):
     title = models.CharField(max_length=50)
     owner = models.ForeignKey(User)
+    note = models.ManyToMany(Note)
 
     def __unicode__(self):
-        return self.label
+        return self.title
 
 class Tag(models.Model):
     label = models.CharField(max_length=50)
@@ -33,5 +34,5 @@ class Note(models.Model):
     is_shared = models.BooleanField(default=False)
 
     def __unicode__(self):
-        return self.label
+        return self.title
 
