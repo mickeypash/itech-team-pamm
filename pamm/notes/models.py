@@ -13,14 +13,6 @@ class UserProfile(models.Model):
     def __unicode__(self):
         return self.user.username
 
-class Folder(models.Model):
-    title = models.CharField(max_length=50)
-    owner = models.ForeignKey(User)
-    note = models.ManyToMany(Note)
-
-    def __unicode__(self):
-        return self.title
-
 class Tag(models.Model):
     label = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50)
@@ -39,3 +31,10 @@ class Note(models.Model):
     def __unicode__(self):
         return self.title
 
+class Folder(models.Model):
+    title = models.CharField(max_length=50)
+    owner = models.ForeignKey(User)
+    note = models.ManyToManyField(Note)
+
+    def __unicode__(self):
+        return self.title
