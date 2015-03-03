@@ -109,9 +109,9 @@ STATICFILES_DIRS = (
     STATIC_PATH,
 )
 
-TEMPLATE_DIRS = [
+TEMPLATE_DIRS = (
     TEMPLATE_PATH,
-]
+)
 
 # This is some sort of caching magic that we don't really need
 # But I like to feel like Harry Potter
