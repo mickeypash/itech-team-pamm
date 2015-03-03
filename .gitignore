@@ -36,6 +36,7 @@ var/
 .installed.cfg
 *.egg
 
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -62,6 +63,7 @@ coverage.xml
 *.log
 db.sqlite3 # No need for the database
 *.sqlite3
+*_initial.py
 
 # Sphinx documentation
 docs/_build/
