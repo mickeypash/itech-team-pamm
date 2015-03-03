@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rango.forms import UserForm, UserProfileForm
+from notes.forms import UserForm, UserProfileForm
 
 # View of landing page
 def index(request):
