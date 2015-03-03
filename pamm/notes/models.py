@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 
 class UserProfile(models.Model):
     # User built-in model
@@ -15,7 +16,11 @@ class UserProfile(models.Model):
 
 class Tag(models.Model):
     label = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=50)
+    slug = models.SlugField(unique=True)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.label)
+        super(Tag, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.label

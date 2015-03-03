@@ -1,18 +1,18 @@
-from django.forms import ModelForm
+from django import forms
 from django.contrib.auth.models import User
 from notes.models import Note,Folder,Tag, UserProfile
 
-class NoteForm(ModelForm):
+class NoteForm(forms.ModelForm):
     class Meta:
         model = Note
         fields = ('title', 'content', 'tag')
 
-class FolderForm(ModelForm):
+class FolderForm(forms.ModelForm):
     class Meta:
         model = Folder
         fields = ('title', 'note')
 
-class TagForm(ModelForm):
+class TagForm(forms.ModelForm):
     class Meta:
         model = Tag
         fields = ('label',)
