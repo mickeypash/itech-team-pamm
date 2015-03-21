@@ -43,7 +43,7 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-#    'south', # http://south.readthedocs.org/en/latest/about.html
+    'bootstrap3',
 )
 
 LOCAL_APPS = (
