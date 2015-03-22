@@ -255,7 +255,7 @@ if __name__ == '__main__':
     ## Printing and importting necessary things
     print "Starting Pamm population script..."
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pamm.settings')
-    from notes.models import User, Folder, Note, Tag
+    from backup.models import User, Folder, Note, Tag
     from django.contrib.auth.models import User
 
     # We are running the populate function we defined above

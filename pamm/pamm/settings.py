@@ -48,8 +48,8 @@ THIRD_PARTY_APPS = (
 )
 
 LOCAL_APPS = (
-    #'notes',
-    'noted',
+    #'backup',
+    'notes',
 )
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
