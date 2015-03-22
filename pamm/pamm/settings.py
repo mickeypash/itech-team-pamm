@@ -30,6 +30,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+APPEND_SLASH = False
 
 # Application definition
 
@@ -73,7 +74,6 @@ PASSWORD_HASHERS = (
 ROOT_URLCONF = 'pamm.urls'
 
 WSGI_APPLICATION = 'pamm.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
