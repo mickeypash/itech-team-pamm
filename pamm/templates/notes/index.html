@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block body %}
-<script>
-   var editor = new MediumEditor('.editor')
-</script>
+{% block body_block %}
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-2 sidebar">
                 <ul class="nav nav-sidebar">
                     <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">TESIIIINNGGGGGGGGGGGGGGGGGGGGGG</a></li>
+                    <li><a href="#">Reports</a></li>
                     <li><a href="#">Analytics</a></li>
                     <li><a href="#">Export</a></li>
                 </ul>
@@ -29,13 +27,13 @@
             <div class="col-sm-2 col-sm-offset-2 sidebar" id="notelist">
                 <div class="list-group">
                     {#                "addnote?id={{ note.id }}"#}
-                {% if note %}
                     {% for note in notes %}
-                        <a data-noteid="{{ note.id }}" href="#" class="list-group-item note" >
+                        <a data-noteid="{{ note.id }}" href="#" class="list-group-item note">
                             <div class="header">
-                                <strong class="primary-font">{{note.title}}</strong>
+                                <strong class="primary-font">{{ note.title }}</strong>
                                 <small class="pull-right text-muted">
-                                    <span class="glyphicon glyphicon-time"></span>{{  note.timestamp|date:"M j" }}</small>
+                                    <span class="glyphicon glyphicon-time"></span>{{ note.timestamp|date:"M j" }}
+                                </small>
                             </div>
                             <p>
                                 <small>
@@ -44,18 +42,22 @@
                             </p>
                         </a>
                     {% endfor %}
-                {% endif %}
                 </div>
             </div>
+
             <div class="col-sm-8 col-sm-offset-4 main">
                 <div class="note-info">
-                    {{ notes.first.title }}
+                    <h1>{{ notes.first.title }}</h1>
                 </div>
-                <div class="editor">
+                <div class="editable col-sm-8 col-sm-offset-4 main">
                     {{ notes.first.body|safe }}
                 </div>
             </div>
         </div>
     </div>
 
-{% endblock body %}
+<script>
+        var editor = new MediumEditor('.editable')
+</script>
+
+{% endblock %}

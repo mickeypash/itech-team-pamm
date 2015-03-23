@@ -1,28 +1,31 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block body %}
+{% block body_block %}
 
-    <div class="jumbotron">
-        <h1 align='center'>Create New Note!</h1>
-    </div>
 
-    <div class='col-md-12'>
-        <form action="" method="post">{% csrf_token %}
-            {{form.as_p}}
-            <input type='submit' value='New Note' class='btn btn-primary btn-lg btn-block' />
-        </form>
-    </div>
-    {% if note %}
-        <div class="col-md-12" style="padding-top:15px">
-            <form action="" method="POST">{% csrf_token %}
-                <input type="hidden" name="control" value="delete" />
-                <input type="submit" value="Delete" class="btn btn-lg btn-block btn-danger" />
-            </form>
+   <div class='container' style='padding-top:10px'>
+            <h1 align='center'>Create New Note!</h1>
+
+            <div class='col-md-10'>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type='submit' value='New Note' class='btn btn-primary btn-lg btn-block'/>
+                </form>
+            </div>
+            {% if note %}
+                <div class="col-md-10" style="padding-top:15px">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <input type="hidden" name="control" value="delete"/>
+                        <input type="submit" value="Delete" class="btn btn-lg btn-block btn-danger"/>
+                    </form>
+                </div>
+            {% endif %}
         </div>
-    {% endif %}
-
+    </div>
     <script type='text/javascript'>
         $('input[type="text"]').addClass('form-control');
         $('textarea').addClass('form-control');
     </script>
-{% endblock body %}
+{% endblock %}
