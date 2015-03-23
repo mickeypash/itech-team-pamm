@@ -6,7 +6,6 @@ from accounts.views import *
 urlpatterns = patterns('',
     url(r'^$', index, name='index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^notes/', include('notes.urls', namespace='notes')),
     # url(r'^register/', register, name='register'),
     # url(r'^login/', user_login, name='login'),
