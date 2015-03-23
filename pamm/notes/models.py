@@ -1,7 +1,8 @@
 from django.db import models
-#from accounts.models import UserProfile
+# from accounts.models import UserProfile
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+
 
 class Note(models.Model):
     title = models.CharField(max_length=200)
@@ -14,6 +15,7 @@ class Note(models.Model):
     def __unicode__(self):
         return self.title
 
+
 class Tag(models.Model):
     label = models.CharField(max_length=50)
     slug = models.SlugField(max_length=50)
@@ -24,6 +26,7 @@ class Tag(models.Model):
 
     def __unicode__(self):
         return self.label
+
 
 class Folder(models.Model):
     title = models.CharField(max_length=50)
