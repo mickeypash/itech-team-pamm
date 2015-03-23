@@ -30,7 +30,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-#APPEND_SLASH = False
+APPEND_SLASH = False
+LOGIN_URL = '/login/'
 
 # Application definition
 
@@ -44,11 +45,11 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'bootstrap3',
+     'bootstrap3',
 )
 
 LOCAL_APPS = (
-    #'backup',
+    'accounts',
     'notes',
 )
 
@@ -115,9 +116,9 @@ TEMPLATE_DIRS = (
 
 # This is some sort of caching magic that we don't really need
 # But I like to feel like Harry Potter
-TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader',
-    )),
-)
+# TEMPLATE_LOADERS = (
+#     ('django.template.loaders.cached.Loader', (
+#         'django.template.loaders.filesystem.Loader',
+#         'django.template.loaders.app_directories.Loader',
+#     )),
+# )
