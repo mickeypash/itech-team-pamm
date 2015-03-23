@@ -13,7 +13,9 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-STATIC_PATH = os.path.join(BASE_DIR,'static')
+
+# STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -31,7 +33,7 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 APPEND_SLASH = False
-LOGIN_URL = '/login/'
+LOGIN_URL = '/accounts/login/'
 
 # Application definition
 
@@ -45,11 +47,13 @@ DEFAULT_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-     'bootstrap3',
+    'grappelli',
+    'bootstrap3',
+    'registration',
 )
 
 LOCAL_APPS = (
-    'accounts',
+    #'accounts',
     'notes',
 )
 
@@ -113,6 +117,10 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
+TEMPLATE_CONTEXT_PROCESSORS = (
+    #'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
 
 # This is some sort of caching magic that we don't really need
 # But I like to feel like Harry Potter
@@ -122,3 +130,10 @@ TEMPLATE_DIRS = (
 #         'django.template.loaders.app_directories.Loader',
 #     )),
 # )
+
+REGISTRATION_OPEN = True        # If True, users can register
+ACCOUNT_ACTIVATION_DAYS = 7     # One-week activation window; you may, of course, use a different value.
+REGISTRATION_AUTO_LOGIN = True  # If True, the user will be automatically logged in.
+LOGIN_REDIRECT_URL = '/notes/'  # The page you want users to arrive at after they successful log in
+LOGIN_URL = '/accounts/login/'  # The page users are directed to if they are not logged in,
+                                                                # and are trying to access pages requiring authentication

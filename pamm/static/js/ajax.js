@@ -6,7 +6,7 @@
 $(document).ready(function() {
     //$('.note').click(function(){
     //    var note_id = $(this).attr("data-noteid");
-    //    var test_data = "HALLO ECLIPSE GLARGOW"
+    //    var test_data = "HALLO ECLIPSE GLASGOW"
     //
     //    $.get('/notes/note_body/', {note_id: note_id}, function(data){
     //        $('.editor').html(data);
