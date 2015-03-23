@@ -2,25 +2,32 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect, HttpResponse
+from django.http import JsonResponse
+from django.utils.text import slugify
+from django.contrib.auth.decorators import login_required
 from models import Note, Tag
 from forms import NoteForm, TagForm
-from django.utils.text import slugify
-from django.contrib.auth.decorators import user_passes_test
-
-from django.http import JsonResponse
-
 
 def superuser_only(user):
     return (user.is_authenticated() and user.is_superuser)
 
-@user_passes_test(superuser_only, login_url="/")
-def index_view(request):
+def index(request):
+    """
+
+    :param request:
+    :return:
+    """
     notes = Note.objects.all().order_by('-timestamp')
     tags = Tag.objects.all()
     return render(request, 'notes/index.html', {'notes':notes, 'tags':tags})
 
-@user_passes_test(superuser_only, login_url="/")
+@login_required
 def add_note(request):
+    """
+
+    :param request:
+    :return:
+    """
     id = request.GET.get('id', None)
     if id is not None:
         note = get_object_or_404(Note, id=id)
@@ -43,8 +50,13 @@ def add_note(request):
 
     return render(request, 'notes/addnote.html', {'form':form, 'note':note})
 
-@user_passes_test(superuser_only, login_url="/")
+@login_required
 def add_tag(request):
+    """
+
+    :param request:
+    :return:
+    """
     id = request.GET.get('id', None)
     if id is not None:
         tag = get_object_or_404(Tag, id=id)
@@ -67,10 +79,13 @@ def add_tag(request):
         form = TagForm(instance=tag)
     return render(request, 'notes/addtag.html', {'form':form, 'tag':tag})
 
-
-
-@user_passes_test(superuser_only, login_url="/")
+@login_required
 def note_content(request):
+    """
+
+    :param request:
+    :return:
+    """
     note_id = None
     if request.method == 'GET':
         note_id = request.GET['note_id']
@@ -80,4 +95,4 @@ def note_content(request):
     if note_id:
         note = Note.objects.get(pk=note_id)
 
-    return JsonResponse({'title': note.label, 'body': note.body})
+    return JsonResponse({'title': note.title, 'body': note.body})
