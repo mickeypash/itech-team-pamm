@@ -13,6 +13,9 @@
 
 MoSCoW slide and Web stack slide
 
+[Django REST framework](http://www.django-rest-framework.org/tutorial/1-serialization/)
+- Make your views have classes
+
 [Evernote's Data Structure](https://dev.evernote.com/doc/articles/data_structure.php)
 
 [Django URLS, howto map root to app](http://stackoverflow.com/questions/7580220/django-urls-howto-map-root-to-app)
